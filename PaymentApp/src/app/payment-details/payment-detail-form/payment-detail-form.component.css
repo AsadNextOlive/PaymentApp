@@ -1,0 +1,11 @@
+.btn-width{
+    width: 100%;
+}
+
+.sh-1{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+form.submitted input.ng-invalid{
+    border-color: red;
+}

@@ -1,0 +1,22 @@
+<div class="bg-body-secondary rounded-2 text-center">
+    <h3>Payment Detail Register</h3>
+</div>
+<div class="row mt-5">
+    <div class="col">
+        <app-payment-detail-form></app-payment-detail-form>
+    </div>
+    <div class="col o-flow">
+        <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-item-start 
+            rounded-3 border mb-2 px-4 py-3 shadow" 
+            *ngFor="let pd of service.list">
+               <div class="flex-glow-1 mouse-hover" (click)="populateForm(pd)">
+                   <div class="font-weight-bold">{{pd.cardOwnerName}}</div>
+                   <div>{{pd.cardNumber}}</div>
+                   <div class="font-weight-bold">{{pd.expirationDate}}</div>
+               </div>
+               <span><i class="fa-solid fa-trash mouse-hover icon-color" (click)="onDelete(pd.paymentDetailId)"></i></span>
+            </li>
+        </ul>
+    </div>
+</div>
